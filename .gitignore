@@ -1,0 +1,7 @@
+/build/*
+!/build/index.js
+!/build/quickjs.js
+
+node_modules
+*.lock
+*-lock.json

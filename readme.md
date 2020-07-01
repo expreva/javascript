@@ -1,0 +1,1 @@
+This package exports a custom bundle of [`@babel/standalone`](https://github.com/babel/babel/tree/master/packages/babel-standalone) and [`quickjs-emscripten`](https://github.com/justjake/quickjs-emscripten).

@@ -1,0 +1,19 @@
+<script src='/build/babel.min.js'></script>
+<script src='/build/quickjs.min.js'></script>
+<script>
+  const { QuickJS, Babel } = window
+
+  console.log('QuickJS', QuickJS)
+  console.log('Babel', Babel)
+
+  window.QuickJS.getQuickJS()
+    .then(function(instance) {
+
+      console.log('instance', instance)
+
+    })
+    .catch(function(error) {
+      console.log('error', error)
+    })
+
+</script>
