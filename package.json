@@ -1,6 +1,6 @@
 {
   "name": "@expreva/javascript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
   "repository": {
@@ -106,7 +106,7 @@
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
     "@babel/preset-typescript": "^7.10.4",
-    "quickjs-emscripten": "^0.4.0"
+    "quickjs-emscripten": "^0.4.1"
   },
   "devDependencies": {
     "@tangible/builder": "1.x"
