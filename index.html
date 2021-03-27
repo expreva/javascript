@@ -6,11 +6,38 @@
   console.log('QuickJS', QuickJS)
   console.log('Babel', Babel)
 
+  console.log('Babel parse', Babel.parse('() => {}'))
+
+  const { code } = Babel.transform('(() => log(\'Hi from compiled and evaluated source\'))()', {
+    sourceType: 'script',
+    filename: 'script.js',
+    presets: [
+      'es2015',
+      'react',
+      'typescript'
+    ]
+  })
+
+  console.log('Babel transform', code)
+
   window.QuickJS.getQuickJS()
     .then(function(instance) {
 
-      console.log('instance', instance)
+      console.log('QuickJS instance', instance)
 
+      const vm = instance.createVm()
+
+      console.log('QuickJS vm', vm)
+
+      vm.setProp(
+        vm.global,
+        'log',
+         vm.newFunction('log', function(handle) {
+          console.log('From vm:', vm.dump(handle))
+        })
+      )
+
+      vm.evalCode( code )
     })
     .catch(function(error) {
       console.log('error', error)
