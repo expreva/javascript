@@ -16,7 +16,7 @@
  * - TODO: Smaller bundle
  */
 
- /* global VERSION */
+/* global VERSION */
 /* eslint-disable max-len */
 
 import {
@@ -111,11 +111,11 @@ function processOptions(options) {
   };
 }
 
-export function parse(code, options) {
+export function parse(code, options = {}) {
   return babelParse(code, processOptions(options));
 }
 
-export function transform(code, options) {
+export function transform(code, options = {}) {
   return babelTransform(code, processOptions(options));
 }
 

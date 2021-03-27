@@ -4,8 +4,7 @@ module.exports = {
       task: 'js',
       src: 'src/quickjs/window.js',
       dest: 'build/quickjs.min.js',
-      watch: 'src/quickjs/**/*.js',
-      map: true
+      watch: 'src/quickjs/**/*.js'
     },
     {
       task: 'babel',
@@ -17,8 +16,7 @@ module.exports = {
       task: 'js',
       src: 'src/babel/window.js',
       dest: 'build/babel.min.js',
-      watch: 'src/babel/**/*.js',
-      map: true
+      watch: 'src/babel/**/*.js'
     },
   ],
   serve: {
