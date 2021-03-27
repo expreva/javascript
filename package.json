@@ -15,6 +15,7 @@
     "*.map"
   ],
   "scripts": {
+    "postinstall": "cp src/babel/clone-deep.js node_modules/@babel/core/lib/transformation/util/clone-deep.js",
     "dev": "tgb dev",
     "build": "tgb build && cp package.json build && cp readme.md build",
     "release": "cd build && npm publish --access public",
